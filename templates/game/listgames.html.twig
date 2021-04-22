@@ -1,0 +1,18 @@
+{%extends 'base.html.twig'%}
+
+{% block body%}
+
+            <div class = "container">
+            <form action="{{ path('game.showResult') }}" method="GET">
+                <label for="cars">Choose a Game:</label>
+                <select name="gameinput" id="gameinput">
+                       {% for game in games%}
+                                   <option value="{{ game.name}}">{{ game.name}}</option>
+                       {% endfor%}
+                 </select>
+            <input class="input_button2" type="submit" value="Get Data" />
+
+           </form>
+            </div>
+
+{%endblock%}

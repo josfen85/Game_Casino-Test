@@ -1,0 +1,31 @@
+{%extends 'base.html.twig'%}
+
+{% block body%}
+<div class = "container">
+          {% if game != 'NOT FOUND!'%}
+            <div>
+            <span>Game Name: {{game.name}}</span>
+            <img class="rounded mx-auto d-block" alt="img not available" id="myImg" src=" {{ game.icon_2}}" width="107" height="98">
+            </div>
+            <h5 >Category list</h5>
+            <ul>
+             {%for category in game.categories%}
+                      <li>{{category}}</li>
+                      
+             {%endfor%}
+              </ul>
+            <h5>BackGround</h5>
+            <img class="rounded mx-auto d-block" alt="img not available" id="myImg" src=" {{ game.background}}" width="720" height="250">
+
+
+          {%else%}
+             <h1>GAME {{game}}</h1>
+             </br>
+          {%endif%}
+    </br>
+    <form action="{{ path('game.index') }}" method="GET">
+    <input class="input_button btn btn-primary" type="submit" value="Go Back To Main Menu" />
+    </form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,14 @@
+{%extends 'base.html.twig'%}
+
+{% block body%}
+            <div class = "container">
+                <form action="{{ path('game.mainMenu') }}" method="GET">
+                <input class="input_button btn btn-success" type="submit" value="Search Game" />
+                </form>
+                </br>
+                <form action="{{ path('game.listgames') }}" method="GET">
+                <input class="input_button2 btn btn-primary" type="submit" value="Choose Game" />
+                </form>
+            </div>
+
+{%endblock%}
