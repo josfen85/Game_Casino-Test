@@ -54,7 +54,7 @@ class GameController extends AbstractController
                       if($form->isSubmitted()  && $form->isValid()){
                             //$em = $this->getDoctrine()->getManager();
                                     echo 'submitted';
-                                  //dump($post);
+                                  //dump($post) ;
 
 
                        return $this->redirect($this->generateUrl('game.index'));
